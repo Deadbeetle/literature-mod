@@ -1,0 +1,8 @@
+[{
+	"modid": "literature",
+	"name": "Magnus' Literature",
+	"description": "An overhaul to books! Dye the covers of your books and stock your bookshelves with them!",
+	"version": "${version}",
+	"mcversion": "${mcversion}",
+	"authorlist": ["Magnus Wright"]
+}]
