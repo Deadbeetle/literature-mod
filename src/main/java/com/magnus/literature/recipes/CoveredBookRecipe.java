@@ -4,6 +4,7 @@ import com.google.gson.JsonObject;
 import com.magnus.literature.LiteratureMod;
 
 import net.minecraft.inventory.CraftingInventory;
+import net.minecraft.item.AirItem;
 import net.minecraft.item.BannerItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -44,7 +45,9 @@ public class CoveredBookRecipe implements ICraftingRecipe {
 		
 		for (int i = 0; i < inv.getSizeInventory(); i++) {
 			ItemStack stack = inv.getStackInSlot(i);
+			if (stack.isEmpty()) continue;
 			Item item = stack.getItem();
+			if (item instanceof AirItem) continue;
 			if (item instanceof BannerItem && banner.isEmpty())
 				banner = stack;
 			else if (item instanceof WrittenBookItem && book.isEmpty())
