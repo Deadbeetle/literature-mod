@@ -89,7 +89,6 @@ public class CoveredBookRecipe implements ICraftingRecipe {
 	}
 	
 	public static class Serializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<CoveredBookRecipe> {
-
 		@Override
 		public CoveredBookRecipe read(ResourceLocation recipeId, JsonObject json) {
 			return new CoveredBookRecipe(recipeId);
